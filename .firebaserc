@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fitbitandactigraph": {
+      "hosting": {
+        "FitbitGraph": [
+          "fitbitandactigraph"
+        ]
+      }
+    }
+  }
+}
