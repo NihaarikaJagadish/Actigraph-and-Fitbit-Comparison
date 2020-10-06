@@ -15,6 +15,21 @@
     [title]="inBedTime.title"
   ></apx-chart>
 </div>
+<div id="chart">
+  <apx-chart
+    [series]="onSetTime.series"
+    [chart]="onSetTime.chart"
+    [xaxis]="onSetTime.xaxis"
+    [stroke]="onSetTime.stroke"
+    [colors]="onSetTime.colors"
+    [dataLabels]="onSetTime.dataLabels"
+    [legend]="onSetTime.legend"
+    [markers]="onSetTime.markers"
+    [grid]="onSetTime.grid"
+    [yaxis]="onSetTime.yaxis"
+    [title]="onSetTime.title"
+  ></apx-chart>
+</div>
 
 <div id="chart">
   <apx-chart
@@ -34,17 +49,17 @@
 
 <div id="chart">
   <apx-chart
-    [series]="onSetTime.series"
-    [chart]="onSetTime.chart"
-    [xaxis]="onSetTime.xaxis"
-    [stroke]="onSetTime.stroke"
-    [colors]="onSetTime.colors"
-    [dataLabels]="onSetTime.dataLabels"
-    [legend]="onSetTime.legend"
-    [markers]="onSetTime.markers"
-    [grid]="onSetTime.grid"
-    [yaxis]="onSetTime.yaxis"
-    [title]="onSetTime.title"
+    [series]="awakeningCount.series"
+    [chart]="awakeningCount.chart"
+    [xaxis]="awakeningCount.xaxis"
+    [stroke]="awakeningCount.stroke"
+    [colors]="awakeningCount.colors"
+    [dataLabels]="awakeningCount.dataLabels"
+    [legend]="awakeningCount.legend"
+    [markers]="awakeningCount.markers"
+    [grid]="awakeningCount.grid"
+    [yaxis]="awakeningCount.yaxis"
+    [title]="awakeningCount.title"
   ></apx-chart>
 </div>
 
@@ -67,33 +82,34 @@
 
 <div id="chart">
   <apx-chart
-    [series]="awakeningCount.series"
-    [chart]="awakeningCount.chart"
-    [xaxis]="awakeningCount.xaxis"
-    [stroke]="awakeningCount.stroke"
-    [colors]="awakeningCount.colors"
-    [dataLabels]="awakeningCount.dataLabels"
-    [legend]="awakeningCount.legend"
-    [markers]="awakeningCount.markers"
-    [grid]="awakeningCount.grid"
-    [yaxis]="awakeningCount.yaxis"
-    [title]="awakeningCount.title"
+    [series]="timeAwake.series"
+    [chart]="timeAwake.chart"
+    [xaxis]="timeAwake.xaxis"
+    [stroke]="timeAwake.stroke"
+    [colors]="timeAwake.colors"
+    [dataLabels]="timeAwake.dataLabels"
+    [legend]="timeAwake.legend"
+    [markers]="timeAwake.markers"
+    [grid]="timeAwake.grid"
+    [yaxis]="timeAwake.yaxis"
+    [title]="timeAwake.title"
   ></apx-chart>
 </div>
 
+
 <div id="chart">
   <apx-chart
-    [series]="chartOptions.series"
-    [chart]="chartOptions.chart"
-    [xaxis]="chartOptions.xaxis"
-    [stroke]="chartOptions.stroke"
-    [colors]="chartOptions.colors"
-    [dataLabels]="chartOptions.dataLabels"
-    [legend]="chartOptions.legend"
-    [markers]="chartOptions.markers"
-    [grid]="chartOptions.grid"
-    [yaxis]="chartOptions.yaxis"
-    [title]="chartOptions.title"
+    [series]="wakeAfterOnset.series"
+    [chart]="wakeAfterOnset.chart"
+    [xaxis]="wakeAfterOnset.xaxis"
+    [stroke]="wakeAfterOnset.stroke"
+    [colors]="wakeAfterOnset.colors"
+    [dataLabels]="wakeAfterOnset.dataLabels"
+    [legend]="wakeAfterOnset.legend"
+    [markers]="wakeAfterOnset.markers"
+    [grid]="wakeAfterOnset.grid"
+    [yaxis]="wakeAfterOnset.yaxis"
+    [title]="wakeAfterOnset.title"
   ></apx-chart>
 </div>
 
@@ -115,49 +131,16 @@
 
 <div id="chart">
   <apx-chart
-    [series]="timeAwake.series"
-    [chart]="timeAwake.chart"
-    [xaxis]="timeAwake.xaxis"
-    [stroke]="timeAwake.stroke"
-    [colors]="timeAwake.colors"
-    [dataLabels]="timeAwake.dataLabels"
-    [legend]="timeAwake.legend"
-    [markers]="timeAwake.markers"
-    [grid]="timeAwake.grid"
-    [yaxis]="timeAwake.yaxis"
-    [title]="timeAwake.title"
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [stroke]="chartOptions.stroke"
+    [colors]="chartOptions.colors"
+    [dataLabels]="chartOptions.dataLabels"
+    [legend]="chartOptions.legend"
+    [markers]="chartOptions.markers"
+    [grid]="chartOptions.grid"
+    [yaxis]="chartOptions.yaxis"
+    [title]="chartOptions.title"
   ></apx-chart>
 </div>
-
-<div id="chart">
-  <apx-chart
-    [series]="wakeAfterOnset.series"
-    [chart]="wakeAfterOnset.chart"
-    [xaxis]="wakeAfterOnset.xaxis"
-    [stroke]="wakeAfterOnset.stroke"
-    [colors]="wakeAfterOnset.colors"
-    [dataLabels]="wakeAfterOnset.dataLabels"
-    [legend]="wakeAfterOnset.legend"
-    [markers]="wakeAfterOnset.markers"
-    [grid]="wakeAfterOnset.grid"
-    [yaxis]="wakeAfterOnset.yaxis"
-    [title]="wakeAfterOnset.title"
-  ></apx-chart>
-</div>
-<!-- 
-<div id="chart">
-  <apx-chart
-    [series]="inBedTime.series"
-    [chart]="inBedTime.chart"
-    [xaxis]="inBedTime.xaxis"
-    [stroke]="inBedTime.stroke"
-    [colors]="inBedTime.colors"
-    [dataLabels]="inBedTime.dataLabels"
-    [legend]="inBedTime.legend"
-    [markers]="inBedTime.markers"
-    [grid]="inBedTime.grid"
-    [yaxis]="inBedTime.yaxis"
-    [title]="inBedTime.title"
-  ></apx-chart>
-</div> -->
-
