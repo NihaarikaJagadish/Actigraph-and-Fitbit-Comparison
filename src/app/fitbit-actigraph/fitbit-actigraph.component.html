@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1 style="width: 100%; text-align: center;">FitBit Vs Actigraph Data Comparison Graph</h1>
+<div id="chart">
+  <apx-chart
+    [series]="inBedTime.series"
+    [chart]="inBedTime.chart"
+    [xaxis]="inBedTime.xaxis"
+    [stroke]="inBedTime.stroke"
+    [colors]="inBedTime.colors"
+    [dataLabels]="inBedTime.dataLabels"
+    [legend]="inBedTime.legend"
+    [markers]="inBedTime.markers"
+    [grid]="inBedTime.grid"
+    [yaxis]="inBedTime.yaxis"
+    [title]="inBedTime.title"
+  ></apx-chart>
+</div>
+<div id="chart">
+  <apx-chart
+    [series]="onSetTime.series"
+    [chart]="onSetTime.chart"
+    [xaxis]="onSetTime.xaxis"
+    [stroke]="onSetTime.stroke"
+    [colors]="onSetTime.colors"
+    [dataLabels]="onSetTime.dataLabels"
+    [legend]="onSetTime.legend"
+    [markers]="onSetTime.markers"
+    [grid]="onSetTime.grid"
+    [yaxis]="onSetTime.yaxis"
+    [title]="onSetTime.title"
+  ></apx-chart>
+</div>
