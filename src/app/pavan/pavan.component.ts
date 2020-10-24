@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
+import { FetchService } from 'src/services/fetchData.service';
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -137,11 +138,12 @@ export type onSetTime = {
   title: ApexTitleSubtitle;
 };
 @Component({
-  selector: 'app-fitbit-both',
-  templateUrl: './fitbit-both.component.html',
-  styleUrls: ['./fitbit-both.component.css']
+  selector: 'app-pavan',
+  templateUrl: './pavan.component.html',
+  styleUrls: ['./pavan.component.css']
 })
-export class FitbitBothComponent  {
+export class PavanComponent   {
+
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   public avgAwakeningInMinutes: Partial<ChartOptions>;
@@ -152,22 +154,24 @@ export class FitbitBothComponent  {
   public inBedTime: Partial<ChartOptions>;
   public outBedTime: Partial<ChartOptions>;
   public onSetTime: Partial<ChartOptions>;
-  constructor() {
+  public details;
+  public dataLoaded = false;
+  public email_1 = 'agitationtrial005@gmail.com';
+  public email_2 = "agitationtrial006@gmail.com";
+  constructor(private fetchData: FetchService) {
+    this.fetchData.fetchArrayData({ email1: this.email_1, email2: this.email_2 }).subscribe((res) => {
+      console.log(res);
+      this.details = res;
+    
     this.chartOptions = {
       series: [
         {
           name: "Fitbit - 1",
-          data:[88,
-          94,
-          92,
-          93]
+          data: this.details[this.email_1]["efficiency"]
         },
         {
           name: "Fitbit - 2",
-          data: [86,
-            92,
-            90,
-            90]
+          data: this.details[this.email_2]["efficiency"]
         }
       ],
       chart: {
@@ -207,7 +211,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -238,14 +242,11 @@ export class FitbitBothComponent  {
       series: [
         {
           name: "Fitbit - 1",
-          data:[2.44,
-          4.71,
-          2.13,
-          1.86]
+          data:this.details[this.email_1]["avgMinutes"]
         },
         {
           name: "Fitbit - 2",
-          data: [2.55, 3.13, 1.71, 2]
+          data: this.details[this.email_2]["avgMinutes"]
         }
       ],
       chart: {
@@ -285,7 +286,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -315,17 +316,11 @@ export class FitbitBothComponent  {
       series: [
         {
           name: "Fitbit - 1",
-          data:[29,
-          21,
-          29,
-          36]
+          data:this.details[this.email_1]["awakeningCount"]
         },
         {
           name: "Fitbit - 2",
-          data: [27,
-            29,
-            28,
-            40]
+          data: this.details[this.email_2]["awakeningCount"]
         }
       ],
       chart: {
@@ -365,7 +360,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -395,17 +390,11 @@ export class FitbitBothComponent  {
       series: [
         {
           name: "Fitbit - 1",
-          data:[457,
-            389,
-            398,
-            464]
+          data:this.details[this.email_1]["timeAsleep"]
         },
         {
           name: "Fitbit - 2",
-          data: [451,
-            449,
-            406,
-            448]
+          data: this.details[this.email_2]["timeAsleep"]
         }
       ],
       chart: {
@@ -445,7 +434,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -459,7 +448,7 @@ export class FitbitBothComponent  {
         title: {
           text: "Minutes"
         },
-        min: 250,
+        min: 100,
         max: 600
       },
       legend: {
@@ -475,17 +464,11 @@ export class FitbitBothComponent  {
       series: [
         {
           name: "FitBit - 1",
-          data:[71,
-            99,
-            62,
-            67]
+          data:this.details[this.email_1]["timeAwake"]
         },
         {
           name: "Fitbit - 2",
-          data: [69,
-            91,
-            48,
-            80]
+          data: this.details[this.email_2]["timeAwake"]
         }
       ],
       chart: {
@@ -525,7 +508,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -554,17 +537,11 @@ export class FitbitBothComponent  {
       series: [
         {
           name: "Fitbit - 1",
-          data:[71,
-            99,
-            62,
-            67]
+          data:this.details[this.email_1]["wakeAfterOnset"]
         },
         {
           name: "Fitbit - 2",
-          data: [69,
-            91,
-            48,
-            80]
+          data: this.details[this.email_2]["wakeAfterOnset"]
         }
       ],
       chart: {
@@ -604,7 +581,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -633,11 +610,11 @@ export class FitbitBothComponent  {
       series: [
         {
           name: "Fitbit - 1",
-          data: [172, 210, 243, 177 ]
+          data: this.details[this.email_1]["inbed"]
         },
         {
           name: "Fitbit - 2",
-          data: [181, 215, 254, 178]
+          data: this.details[this.email_2]["inbed"]
         }
       ],
       chart: {
@@ -677,7 +654,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -691,8 +668,8 @@ export class FitbitBothComponent  {
         title: {
           text: "Minutes"
         },
-        min: 50,
-        max: 300
+        min: 120,
+        max: 600
       },
       legend: {
         position: "top",
@@ -711,11 +688,11 @@ export class FitbitBothComponent  {
       series: [
         {
           name: "Fitbit - 1",
-          data: [220, 219, 223, 228]
+          data: this.details[this.email_1]["outbed"]
         },
         {
           name: "Fitbit - 2",
-          data: [221, 276, 219, 226]
+          data: this.details[this.email_2]["outbed"]
         }
       ],
       chart: {
@@ -755,7 +732,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -789,11 +766,11 @@ export class FitbitBothComponent  {
       series: [
         {
           name: "Fitbit - 1",
-          data: [177, 223, 248, 177]
+          data: this.details[this.email_1]["onset"]
         },
         {
           name: "Fitbit - 2",
-          data: [181,223,245,178]
+          data: this.details[this.email_2]["onset"]
         }
       ],
       chart: {
@@ -833,7 +810,7 @@ export class FitbitBothComponent  {
         size: 1
       },
       xaxis: {
-        categories: ['10-01', '10-02', '10-03', '10-04'],
+        categories: this.details[this.email_1]["dates"],
         title: {
           text: "Dates"
         }
@@ -847,8 +824,8 @@ export class FitbitBothComponent  {
         title: {
           text: "Minutes"
         },
-        min: 50,
-        max: 300
+        min: 120,
+        max: 600
       },
       legend: {
         position: "top",
@@ -858,7 +835,8 @@ export class FitbitBothComponent  {
         offsetX: -5
       }
     };
+    this.dataLoaded = true
+  });
   }
-
 
 }
