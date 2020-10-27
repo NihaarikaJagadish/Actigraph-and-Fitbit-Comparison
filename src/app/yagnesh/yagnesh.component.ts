@@ -668,7 +668,7 @@ export class YagneshComponent {
         title: {
           text: "Minutes"
         },
-        min: 200,
+        min: 150,
         max: 500
       },
       legend: {
@@ -746,7 +746,7 @@ export class YagneshComponent {
         title: {
           text: "Minutes"
         },
-        min: 150,
+        min: 0,
         max: 320
       },
       legend: {
@@ -824,7 +824,7 @@ export class YagneshComponent {
         title: {
           text: "Minutes"
         },
-        min: 200,
+        min: 100,
         max: 500
       },
       legend: {

@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1 style="width: 100%; text-align: center;">FitBit Vs FitBit Data Comparison Graph</h1>
+<div *ngIf = "dataLoaded">
 <div id="chart">
   <apx-chart
     [series]="inBedTime.series"
@@ -143,4 +144,5 @@
     [yaxis]="chartOptions.yaxis"
     [title]="chartOptions.title"
   ></apx-chart>
+</div>
 </div>
