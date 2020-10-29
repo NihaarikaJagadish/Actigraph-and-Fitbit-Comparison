@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UdithComponent } from './udith/udith.component';
 import { PavanComponent } from './pavan/pavan.component';
 import { YagneshComponent } from './yagnesh/yagnesh.component';
+import { ActivityParticipant1Component } from './activity-participant1/activity-participant1.component';
+import { ActivityParticipant2Component } from './activity-participant2/activity-participant2.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { YagneshComponent } from './yagnesh/yagnesh.component';
     UdithComponent,
     PavanComponent,
     YagneshComponent,
+    ActivityParticipant1Component,
+    ActivityParticipant2Component,
   ],
   imports: [
     BrowserModule,

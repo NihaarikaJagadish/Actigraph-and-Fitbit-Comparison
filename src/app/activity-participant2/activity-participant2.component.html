@@ -1,0 +1,102 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1 style="width: 100%; text-align: center;">FitBit Vs FitBit Physical Activity Data Comparison Graph</h1>
+<div id = "outer" *ngIf = "dataLoaded">
+
+<div id="chart">
+  <apx-chart
+    [series]="awakeningCount.series"
+    [chart]="awakeningCount.chart"
+    [xaxis]="awakeningCount.xaxis"
+    [stroke]="awakeningCount.stroke"
+    [colors]="awakeningCount.colors"
+    [dataLabels]="awakeningCount.dataLabels"
+    [legend]="awakeningCount.legend"
+    [markers]="awakeningCount.markers"
+    [grid]="awakeningCount.grid"
+    [yaxis]="awakeningCount.yaxis"
+    [title]="awakeningCount.title"
+  ></apx-chart>
+</div>
+
+
+<div id="chart">
+  <apx-chart
+    [series]="avgAwakeningInMinutes.series"
+    [chart]="avgAwakeningInMinutes.chart"
+    [xaxis]="avgAwakeningInMinutes.xaxis"
+    [stroke]="avgAwakeningInMinutes.stroke"
+    [colors]="avgAwakeningInMinutes.colors"
+    [dataLabels]="avgAwakeningInMinutes.dataLabels"
+    [legend]="avgAwakeningInMinutes.legend"
+    [markers]="avgAwakeningInMinutes.markers"
+    [grid]="avgAwakeningInMinutes.grid"
+    [yaxis]="avgAwakeningInMinutes.yaxis"
+    [title]="avgAwakeningInMinutes.title"
+  ></apx-chart>
+</div>
+
+<div id="chart">
+  <apx-chart
+    [series]="timeAwake.series"
+    [chart]="timeAwake.chart"
+    [xaxis]="timeAwake.xaxis"
+    [stroke]="timeAwake.stroke"
+    [colors]="timeAwake.colors"
+    [dataLabels]="timeAwake.dataLabels"
+    [legend]="timeAwake.legend"
+    [markers]="timeAwake.markers"
+    [grid]="timeAwake.grid"
+    [yaxis]="timeAwake.yaxis"
+    [title]="timeAwake.title"
+  ></apx-chart>
+</div>
+
+
+<div id="chart">
+  <apx-chart
+    [series]="wakeAfterOnset.series"
+    [chart]="wakeAfterOnset.chart"
+    [xaxis]="wakeAfterOnset.xaxis"
+    [stroke]="wakeAfterOnset.stroke"
+    [colors]="wakeAfterOnset.colors"
+    [dataLabels]="wakeAfterOnset.dataLabels"
+    [legend]="wakeAfterOnset.legend"
+    [markers]="wakeAfterOnset.markers"
+    [grid]="wakeAfterOnset.grid"
+    [yaxis]="wakeAfterOnset.yaxis"
+    [title]="wakeAfterOnset.title"
+  ></apx-chart>
+</div>
+
+<div id="chart">
+  <apx-chart
+    [series]="timeAsleep.series"
+    [chart]="timeAsleep.chart"
+    [xaxis]="timeAsleep.xaxis"
+    [stroke]="timeAsleep.stroke"
+    [colors]="timeAsleep.colors"
+    [dataLabels]="timeAsleep.dataLabels"
+    [legend]="timeAsleep.legend"
+    [markers]="timeAsleep.markers"
+    [grid]="timeAsleep.grid"
+    [yaxis]="timeAsleep.yaxis"
+    [title]="timeAsleep.title"
+  ></apx-chart>
+</div>
+
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [stroke]="chartOptions.stroke"
+    [colors]="chartOptions.colors"
+    [dataLabels]="chartOptions.dataLabels"
+    [legend]="chartOptions.legend"
+    [markers]="chartOptions.markers"
+    [grid]="chartOptions.grid"
+    [yaxis]="chartOptions.yaxis"
+    [title]="chartOptions.title"
+  ></apx-chart>
+</div>
+</div>
