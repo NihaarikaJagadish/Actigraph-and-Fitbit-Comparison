@@ -7,8 +7,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http'
     providedIn: 'root'
 })
 export class FetchService{
-    baseUri = 'https://9135db5cf8cf.ngrok.io/fetchingData';
-    baseActivity = 'https://9135db5cf8cf.ngrok.io/activity';
+    baseUri = 'http://localhost:5000/fetchingData';
+    baseActivity = 'http://localhost:5000/activity';
 
     constructor(private http: HttpClient) {}
 

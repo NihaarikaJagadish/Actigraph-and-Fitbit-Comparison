@@ -198,7 +198,7 @@ export class ActivityParticipant2Component   {
         curve: "smooth"
       },
       title: {
-        text: "Calories Burnt",
+        text: "Calories Burnt ( Correlation Coefficient : "+ this.details["variance"]["caloriesBurnt"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -281,7 +281,7 @@ export class ActivityParticipant2Component   {
         curve: "smooth"
       },
       title: {
-        text: "Elevation",
+        text: "Elevation ( Correlation Coefficient : "+ this.details["variance"]["elevation"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -355,7 +355,7 @@ export class ActivityParticipant2Component   {
         curve: "smooth"
       },
       title: {
-        text: "No. of Floors Climbed",
+        text: "No. of Floors Climbed ( Correlation Coefficient : "+ this.details["variance"]["floors"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -429,7 +429,7 @@ export class ActivityParticipant2Component   {
         curve: "smooth"
       },
       title: {
-        text: "Light Activity Time in Minutes",
+        text: "Light Activity Time in Minutes ( Correlation Coefficient : "+ this.details["variance"]["lightly"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -503,7 +503,7 @@ export class ActivityParticipant2Component   {
         curve: "smooth"
       },
       title: {
-        text: "Steps Per Day",
+        text: "Steps Per Day ( Correlation Coefficient : "+ this.details["variance"]["steps"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -576,7 +576,7 @@ export class ActivityParticipant2Component   {
         curve: "smooth"
       },
       title: {
-        text: "Very Active Time",
+        text: "Very Active Time ( Correlation Coefficient : "+ this.details["variance"]["verActive"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {

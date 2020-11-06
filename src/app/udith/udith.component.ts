@@ -201,7 +201,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "Sleep Efficiency",
+        text: "Sleep Efficiency ( Correlation Coefficient : "+ this.details["variance"]["efficiency"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -278,7 +278,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "Average awakening In Minutes",
+        text: "Average awakening In Minutes ( Correlation Coefficient : "+ this.details["variance"]["avgMinutes"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -352,7 +352,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "Awakening Count",
+        text: "Awakening Count ( Correlation Coefficient : "+ this.details["variance"]["awakeningCount"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -426,7 +426,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "Time Asleep In Minutes",
+        text: "Time Asleep In Minutes ( Correlation Coefficient : "+ this.details["variance"]["timeAsleep"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -500,7 +500,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "Time Awake In Minutes",
+        text: "Time Awake In Minutes ( Correlation Coefficient : "+ this.details["variance"]["timeAwake"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -573,7 +573,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "Wake After Sleep Onset",
+        text: "Wake After Sleep Onset ( Correlation Coefficient : "+ this.details["variance"]["wakeAfterOnset"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -646,7 +646,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "In Bed Time (The Minutes Past 10 p.m. is Displayed)",
+        text: "In Bed Time (The Minutes Past 10 p.m. is Displayed) ( Correlation Coefficient : "+ this.details["variance"]["inbed"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -675,7 +675,7 @@ export class UdithComponent  {
           text: "Minutes"
         },
         min: 50,
-        max: 300
+        max: 400
       },
       legend: {
         position: "top",
@@ -724,7 +724,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "Out Bed Time (The Minutes Past 6 a.m is Displayed)",
+        text: "Out Bed Time (The Minutes Past 6 a.m is Displayed) ( Correlation Coefficient : "+ this.details["variance"]["outbed"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -753,7 +753,7 @@ export class UdithComponent  {
           text: "Minutes"
         },
         min: 0,
-        max: 300
+        max: 400
       },
       legend: {
         position: "top",
@@ -802,7 +802,7 @@ export class UdithComponent  {
         curve: "smooth"
       },
       title: {
-        text: "Sleep OnSet Time (The Minutes Past 10 p.m. is Displayed)",
+        text: "Sleep OnSet Time (The Minutes Past 10 p.m. is Displayed) ( Correlation Coefficient : "+ this.details["variance"]["onset"][0].toFixed(2) + " )",
         align: "left"
       },
       grid: {
@@ -830,8 +830,8 @@ export class UdithComponent  {
         title: {
           text: "Minutes"
         },
-        min: 50,
-        max: 300
+        min: 150,
+        max: 400
       },
       legend: {
         position: "top",
